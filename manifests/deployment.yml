@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: rilopespipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: rilopespipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: rilopespipelinesjavascriptdocker 
+          image: acrlopes.azurecr.io/rilopespipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
